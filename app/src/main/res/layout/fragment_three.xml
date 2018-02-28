@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eceef1"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <com.client.rokarr.customView.CustomAutoCompleteView
+            android:layout_width="wrap_content"
+            android:imeOptions="actionNext"
+            android:layout_height="wrap_content"
+            android:selectAllOnFocus="true"
+            android:inputType="textNoSuggestions"
+            android:id="@+id/name1"
+            android:hint="Search Name"
+            android:layout_weight="0.61"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <com.client.rokarr.customView.CustomAutoCompleteView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"
+            android:hint="Search Product"
+            android:selectAllOnFocus="true"
+            android:id="@+id/product12"
+            android:layout_weight="0.04"
+            android:gravity="center_horizontal"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/text"
+        android:gravity="center_horizontal">
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/fromDate"
+            android:cursorVisible="false"
+            android:hint="From date"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/toDate"
+            android:cursorVisible="false"
+            android:hint="To date"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textSize="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_alignParentTop="true"
+            android:entries="@array/array"
+            android:prompt="@string/prompt"
+            android:layout_toRightOf="@+id/toDate"
+            android:layout_toEndOf="@+id/toDate"
+            android:layout_alignBottom="@+id/toDate"
+            android:spinnerMode="dropdown"
+            android:layout_marginRight="5dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:weightSum="1"
+        android:paddingTop="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:text="Search"
+            android:id="@+id/bt_search"
+            android:background="#0381ff"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/background_light"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:text="Balance"
+            android:id="@+id/checkBalance"
+            android:background="@android:color/holo_green_dark"
+            android:textColor="@android:color/background_light"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:text="PayMode"
+            android:id="@+id/bt_paymode"
+            android:background="@android:color/holo_red_light"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/background_light"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product"
+            android:id="@+id/abcde"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:id="@+id/abcde1"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:paddingTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bill No"
+            android:id="@+id/abcde2"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" />
+    </RelativeLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:id="@+id/gridView"
+        android:numColumns="1" />
+
+
+</LinearLayout>
