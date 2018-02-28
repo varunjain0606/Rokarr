@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.client.rokarr" >
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+
+    <application
+        android:name=".loginandregistration.helper.app.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyMaterialTheme" >
+        <meta-data android:name="com.google.android.backup.api_key"
+            android:value="AEdPqrEAAAAI_1sA-rEwYV8pmhuGaMa0MxIhAKi9i4Q47AckqQ" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AddProducts" />
+        <activity android:name=".PrintPreview"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            />
+        <activity android:name=".activity.DriveActivity" />
+        <activity android:name=".MainActivity1"/>
+        <activity android:name=".activity.RegisterActivity"/>
+    </application>
+
+</manifest>

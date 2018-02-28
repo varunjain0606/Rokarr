@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eceef1"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="463dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:id="@+id/sheetdate"
+            android:background="@android:color/holo_green_light"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Receipt"
+            android:textStyle="bold"
+            android:id="@+id/textView25"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="1dp"
+            android:layout_alignTop="@+id/sheetdate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Payment"
+            android:textStyle="bold"
+            android:id="@+id/textView26"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_alignTop="@+id/textView25"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="1dp" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="463dp">
+        <ListView
+            android:layout_width="194dp"
+            android:layout_height="438dp"
+            android:id="@+id/receiptlist"
+            android:divider="#00000000"
+            android:background="@drawable/tab_color_selector"
+            android:layout_alignTop="@+id/paymentlist"
+            android:layout_alignRight="@+id/sheetdate"
+            android:layout_alignEnd="@+id/sheetdate"
+            android:layout_alignLeft="@+id/textView25"
+            android:layout_alignStart="@+id/textView25"
+            android:layout_gravity="bottom" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="438dp"
+            android:id="@+id/paymentlist"
+            android:divider="#00000000"
+            android:layout_alignRight="@+id/textView26"
+            android:layout_alignEnd="@+id/textView26"
+            android:layout_toEndOf="@+id/receiptlist"
+            android:background="@drawable/tab_color_selector"
+            android:layout_below="@+id/textView26"
+            android:layout_toRightOf="@+id/receiptlist"
+            android:layout_gravity="bottom" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fourfragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total:"
+            android:id="@+id/textView27"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textStyle="bold"
+            android:id="@+id/totalsheet1"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView27"
+            android:layout_toEndOf="@+id/textView27"
+            android:layout_marginLeft="2dp"
+            android:gravity="right" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textStyle="bold"
+            android:id="@+id/totalsheet2"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="right"
+            android:layout_marginRight="3dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total:"
+            android:id="@+id/textView28"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/totalsheet2"
+            android:layout_toStartOf="@+id/totalsheet2" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,516 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eceef1"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:id="@+id/relative">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollViewFrag1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/xyz1">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Bill No.     "
+            android:id="@+id/textView"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#065c27"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/billNo"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Date: "
+            android:id="@+id/textView2"
+            android:textColor="#065c27"
+            android:textSize="18dp"
+            android:layout_marginLeft="7dp" />
+
+        <EditText
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/billDate"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:background="@android:color/holo_green_light"
+            android:paddingRight="10dp"
+            android:layout_weight="0.34" />
+    </LinearLayout>
+
+        <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linearLayout"
+        android:id="@+id/linearLayout2"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Name:    "
+            android:id="@+id/textView4"
+            android:paddingLeft="10dp"
+            android:textColor="#222222"
+            android:textSize="18dp" />
+
+        <com.client.rokarr.customView.CustomAutoCompleteView
+            android:layout_width="wrap_content"
+            android:nextFocusDown="@+id/clientAddress"
+            android:imeOptions="actionNext"
+            android:layout_height="wrap_content"
+            android:selectAllOnFocus="true"
+            android:inputType="textNoSuggestions"
+            android:id="@+id/clientName"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linearLayout2"
+        android:id="@+id/linearLayout6"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Address:"
+            android:id="@+id/textView5"
+            android:paddingLeft="10dp"
+            android:textColor="#222222"
+            android:textSize="18dp" />
+
+        <com.client.rokarr.customView.CustomAutoCompleteView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@+id/product"
+            android:imeOptions="actionNext"
+            android:selectAllOnFocus="true"
+            android:inputType="textNoSuggestions"
+            android:id="@+id/clientAddress"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:id="@+id/linearLayout3"
+            android:paddingRight="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/linearLayout6"
+            android:layout_gravity="top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Product: "
+                android:id="@+id/textView3"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:textColor="#222222"
+                android:textSize="18dp"
+                android:layout_gravity="top" />
+
+            <com.client.rokarr.customView.CustomAutoCompleteView
+                android:layout_width="match_parent"
+                android:inputType="textNoSuggestions"
+                android:nextFocusDown="@+id/prodPrice"
+                android:selectAllOnFocus="true"
+                android:imeOptions="actionNext"
+                android:layout_height="wrap_content"
+                android:id="@+id/product"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout4"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Price:       "
+            android:id="@+id/textView6"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#222222"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@+id/quantity"
+            android:inputType="numberDecimal"
+            android:layout_margin="0.5dp"
+            android:ems="10"
+            android:selectAllOnFocus="true"
+            android:id="@+id/prodPrice" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Qty:"
+            android:id="@+id/textView7"
+            android:textColor="#222222"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@+id/tax"
+            android:inputType="numberSigned"
+            android:layout_margin="0.5dp"
+            android:selectAllOnFocus="true"
+            android:ems="10"
+            android:id="@+id/quantity"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout5"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Tax:          "
+            android:id="@+id/textView8"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#222222"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:ems="10"
+            android:id="@+id/tax" />
+
+        <TextView
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="%      "
+            android:id="@+id/textView9"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#0e0f0a"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/add"
+            android:textAllCaps="false"
+            android:id="@+id/bt_addProducts" />
+    </LinearLayout>
+
+        <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linearLayout5"
+        android:id="@+id/linearLayout7"
+        android:paddingRight="10dp"
+            android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Total:       "
+            android:id="@+id/textView10"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#222222"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/totalAmount"
+            android:selectAllOnFocus="true"
+            android:layout_margin="0.5dp"
+            android:layout_weight="0.20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Rs."
+            android:id="@+id/textView11"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+            <Spinner
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner2"
+                android:entries="@array/array1"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="44.5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linearLayout7"
+        android:id="@+id/linearLayout8"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Discount:"
+            android:id="@+id/textView12"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#222222"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:windowSoftInputMode="adjustPan"
+            android:id="@+id/discount"
+            android:selectAllOnFocus="true"
+            android:layout_margin="0.5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="%   "
+            android:id="@+id/textView13"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#0e0f0a"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:textColorHint="@color/input_register"
+            android:layout_height="wrap_content"
+            android:windowSoftInputMode="adjustPan"
+            android:inputType="textNoSuggestions"
+            android:id="@+id/checkDD"
+            android:singleLine="true"
+            android:hint="Cheque/DD No."
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linearLayout8"
+        android:paddingRight="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Amount:  "
+            android:id="@+id/textView14"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:textColor="#222222"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:windowSoftInputMode="adjustPan"
+            android:ems="10"
+            android:textStyle="bold"
+            android:id="@+id/NetAmount"
+            android:layout_weight="0.08" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Rs."
+            android:id="@+id/textView15"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="#222222"
+            android:textSize="18dp" />
+    </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xyz1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="1"
+            android:id="@+id/linearLayout14">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Balance:  "
+                android:id="@+id/textView24"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:textColor="#222222"
+                android:textSize="18dp" />
+
+            <EditText
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:windowSoftInputMode="adjustPan"
+                android:inputType="numberDecimal"
+                android:nextFocusDown="@+id/paid"
+                android:ems="10"
+                android:id="@+id/balance"
+                android:layout_margin="0.5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Paid:"
+                android:id="@+id/textView43"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:textColor="#222222"
+                android:textSize="18dp" />
+
+            <EditText
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned|numberDecimal"
+                android:selectAllOnFocus="true"
+                android:ems="10"
+                android:id="@+id/paid"
+                android:layout_weight="0.67"
+                android:layout_margin="0.5dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/linearLayout14"
+            android:gravity="center"
+            android:paddingTop="10dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="#0381ff"
+                android:text="Clear"
+                android:id="@+id/clear"
+                android:layout_gravity="top"
+                android:textColor="@android:color/background_light"
+                android:layout_marginRight="7dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@android:color/holo_green_light"
+                android:text="Save"
+                android:id="@+id/bt_save"
+                android:layout_gravity="top"
+                android:textColor="@android:color/background_light"
+                android:layout_marginRight="7dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="#FFFF2C0D"
+                android:text="Preview"
+                android:id="@+id/bt_preview"
+                android:layout_gravity="top"
+                android:textColor="@android:color/background_light"
+                android:layout_marginRight="3dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
